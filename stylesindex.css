@@ -7,17 +7,23 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background-color: #262626;
  }
  
  header {
-   rotate: (90deg);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
- }
+   background-color: #000;
+   position: fixed; 
+   top: -20px; 
+   left: 0;
+   right: 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   padding: 20px;
+   box-sizing: border-box;
+   z-index: 100; 
+}
  
  .logo {
     font-size: 2em;
@@ -27,22 +33,23 @@ body {
  nav a {
     margin: 0 10px;
     text-decoration: none;
-    color: #333;
+    color: #ff0000;
  }
  
 
 
  .slider {
-    width: 100%;
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 5em;
-    color: #333;
-    background: url('img/pexels-thirdman-8470830.jpg') no-repeat center center;
-    background-size: cover;
- }
+   width: 100%;
+   height: 80vh; 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 5em;
+   color: #333;
+   background: url('img/Background2.jpeg') no-repeat center center;
+   background-size: cover;
+   margin-top: 60px; 
+}
  
  .social {
     display: flex;
@@ -83,16 +90,22 @@ body {
    cursor: pointer;
 }
 
-.containerlogo h2{
-   color: black;
+.containerlogo h2 {
+   color: white;
    font-weight: 300;
    font-size: 35px;
    letter-spacing: 2px;
+   text-shadow: 
+       1px 1px 0 #ff0000, 
+       2px 2px 0 #ff0000; 
 }
 
-.containerlogo h2 span{
-   color: lightblue;
+.containerlogo h2 span {
+   color: #ff0000;
    font-weight: 700;
+   text-shadow: 
+       1px 1px 0 white, 
+       2px 2px 0 white; 
 }
 
 .links .link {
@@ -230,41 +243,42 @@ h3 {
    font-weight: 400;
    margin-top: -25px;
    margin-left: -10px;
-   color: black; 
+   color: white; 
 }
 
 /* Ajustes para dispositivos móviles */
 @media (max-width: 768px) {
    body {
-       padding: 10px; /* Espacio adicional para el contenido */
+       padding: 10px;
    }
 
    header {
-       flex-direction: column; /* Cambiar a columna para mejor visualización */
-       align-items: flex-start; /* Alinear a la izquierda */
+       flex-direction: column;
+       align-items: flex-start;
    }
 
    nav ul {
-       flex-direction: column; /* Cambiar a columna */
-       padding: 0; /* Quitar el padding */
+       flex-direction: column; 
+       padding: 0; 
    }
 
    nav a {
-       margin: 5px 0; /* Margen vertical entre enlaces */
+       margin: 5px 0; 
    }
 
    .kodfun-galeri {
-       display: grid; /* Usar grid para la galería */
-       grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-       gap: 10px; /* Espacio entre imágenes */
+       display: grid; 
+       grid-template-columns: repeat(2, 1fr); 
+       gap: 10px; 
    }
 
    .media {
-       width: 100%; /* Ancho completo */
-       height: auto; /* Alto automático */
+       width: 100%;
+       height: auto; 
    }
 
    h1, h2 {
-       font-size: 1.5em; /* Ajustar tamaño de fuente */
+       font-size: 1.5em; 
    }
 }
+
